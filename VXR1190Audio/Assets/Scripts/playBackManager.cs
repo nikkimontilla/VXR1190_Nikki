@@ -7,31 +7,19 @@ using UnityEngine.Audio;
 
 public class playBackManager : MonoBehaviour
 {
-    public AudioSource audio1, audio2;
-    public AudioClip myClip;
+    
+    public AudioMixerSnapshot OminousAtmosphere;
+    public AudioMixerSnapshot HorrorAmbience;
 
-
-    public AudioMixerSnapshot Day;
-    public AudioMixerSnapshot Night;
-
-    public void TransitionDay()
+    public void OnTriggerEnter(Collider collision)
     {
-        Day.TransitionTo(2);
+        HorrorAmbience.TransitionTo(1);
 
     }
 
-    public void PlayOnce(AudioSource audioSource)
+    public void OnTriggerExit(Collider collision)
     {
-        if (!audioSource.isPlaying)
-        {
-            audioSource.PlayOneShot(myClip);
-        }
-        Debug.Log("clip played");
-    }
+        OminousAtmosphere.TransitionTo(1);
 
-    public void TransitionNight()
-    {
-        Night.TransitionTo(2);
     }
-
 }

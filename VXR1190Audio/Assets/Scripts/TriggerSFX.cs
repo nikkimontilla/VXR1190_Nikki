@@ -6,19 +6,19 @@ public class TriggerSFX : MonoBehaviour
 {
     public AudioSource playSound;
 
-    private void OnTriggerEnter(Collider other)
+    public void Awake()
     {
-        
+        playSound = GetComponent<AudioSource>();
     }
-    // Start is called before the first frame update
-    void Start()
+
+    public void OnTriggerEnter(Collider other)
     {
         playSound.Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerExit(Collider other)
     {
-        
+        playSound.Stop();
     }
+
 }

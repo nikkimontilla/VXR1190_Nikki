@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-4489974992894985955
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 17bede8938dd1f94d9ac5e594a0f088e
+  m_EffectName: Attenuation
+  m_MixLevel: 07f112501b962e84895bddb8cd66de70
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &-4110983100125548001
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HorrorAmbience
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: ba3fc786cbd9bfc4d82f5e2d0ddf9a15
+  m_FloatValues:
+    e6c3e095ea9879f4e94a594e66246bd7: -80
+    f0e0eca592fc0b04c937c5817ecaa665: 5
+    cd2197883f1d55242a3173523e1d6a8b: 0.35258967
+  m_TransitionOverrides: {}
+--- !u!243 &-388406293452029035
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ominous Atmosphere
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 35c14098744e3c744a8511126a210981
+  m_Children: []
+  m_Volume: e6c3e095ea9879f4e94a594e66246bd7
+  m_Pitch: ecd7d886f95d3574ea4c212d9c51c71d
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -4489974992894985955}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!241 &24100000
+AudioMixerController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MainMix
+  m_OutputGroup: {fileID: 0}
+  m_MasterGroup: {fileID: 24300002}
+  m_Snapshots:
+  - {fileID: 24500006}
+  - {fileID: -4110983100125548001}
+  m_StartSnapshot: {fileID: 24500006}
+  m_SuspendThreshold: -80
+  m_EnableSuspend: 1
+  m_UpdateMode: 0
+  m_ExposedParameters: []
+  m_AudioMixerGroupViews:
+  - guids:
+    - 4d8e985ce3fb28a45988035c376b8d01
+    - 35c14098744e3c744a8511126a210981
+    - 94369d07f9b075c4d95f58b1345739f8
+    name: View
+  m_CurrentViewIndex: 0
+  m_TargetSnapshot: {fileID: -4110983100125548001}
+--- !u!243 &24300002
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Master
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 4d8e985ce3fb28a45988035c376b8d01
+  m_Children:
+  - {fileID: -388406293452029035}
+  - {fileID: 7763691438823189465}
+  m_Volume: cd2197883f1d55242a3173523e1d6a8b
+  m_Pitch: 80ce514ed6690b24c91ef1e4705f85c7
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 24400004}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &24400004
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: bcbcaaeffc63682439d3412debeed425
+  m_EffectName: Attenuation
+  m_MixLevel: 3eeae32dcbbd8be4a8737a2d8957cc1b
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &24500006
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: OminousAtmosphere
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 269533dc5e3f71a409655a71338ecc01
+  m_FloatValues:
+    e6c3e095ea9879f4e94a594e66246bd7: 3.5
+    f0e0eca592fc0b04c937c5817ecaa665: -80
+    cd2197883f1d55242a3173523e1d6a8b: 0.35258967
+  m_TransitionOverrides: {}
+--- !u!244 &7073797584343964580
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: ef1c2ccb859d8d848a00b05f67531596
+  m_EffectName: Attenuation
+  m_MixLevel: 4e9915eaf1aff9143b62a117114f215f
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!243 &7763691438823189465
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Horror Ambience
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 94369d07f9b075c4d95f58b1345739f8
+  m_Children: []
+  m_Volume: f0e0eca592fc0b04c937c5817ecaa665
+  m_Pitch: 70cab1b046358b84b9abedada54a618f
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 7073797584343964580}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
